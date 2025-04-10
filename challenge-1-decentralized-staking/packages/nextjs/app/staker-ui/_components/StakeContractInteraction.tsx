@@ -35,8 +35,8 @@ export const StakeContractInteraction = ({ address }: { address?: string }) => {
   });
   const { data: myStake } = useScaffoldReadContract({
     contractName: "Staker",
-    functionName: "balances",
-    args: [connectedAddress],
+    functionName: "balances" as any,
+    args: [connectedAddress] as any,
     watch: true,
   });
   const { data: isStakingCompleted } = useScaffoldReadContract({
@@ -81,7 +81,7 @@ export const StakeContractInteraction = ({ address }: { address?: string }) => {
           <div className="flex flex-col items-center w-1/2">
             <p className="block text-xl mt-0 mb-1 font-semibold">You Staked</p>
             <span>
-              {myStake ? formatEther(myStake) : 0} {targetNetwork.nativeCurrency.symbol}
+              {myStake ? formatEther(myStake[0] as bigint) : 0} {targetNetwork.nativeCurrency.symbol}
             </span>
           </div>
         </div>
