@@ -9,6 +9,9 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
+# local contracts
+packages/nextjs/contracts/deployedContracts.ts
+
 # eslint
 .eslintcache
 
