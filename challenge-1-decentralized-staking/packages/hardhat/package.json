@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@inquirer/password": "^4.0.2",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "~5.0.2",
     "@typechain/ethers-v6": "~0.5.1",
     "dotenv": "~16.4.5",
